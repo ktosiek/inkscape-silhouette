@@ -128,7 +128,6 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: inkscape-silhouette_${{ steps.branch_name.outputs.SOURCE_SOURCE_VERSION }}-1_all.deb
           path: distribute/out/
 
       - name: Publish to PPA
