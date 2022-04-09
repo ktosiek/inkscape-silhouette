@@ -129,7 +129,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          path: distribute/out/
+          path: distribute/out/inkscape-silhouette-${{ steps.branch_name.outputs.SOURCE_SOURCE_VERSION }}-1/
 
       - name: Publish to PPA
         uses: yuezk/publish-ppa-package@develop
@@ -137,4 +137,4 @@ jobs:
           repository: 'ppa:ppa:tomasz-kontusz/test'
           gpg_private_key: ${{ secrets.PPA_GPG_PRIVATE_KEY }}
           gpg_passphrase: ${{ secrets.PPA_GPG_PASSPHRASE }}
-          pkgdir: '${{ github.workspace }}/distribute/out/'
+          pkgdir: '${{ github.workspace }}/distribute/out/inkscape-silhouette-*/'
