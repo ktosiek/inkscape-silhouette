@@ -137,7 +137,7 @@ jobs:
       - name: Publish to PPA
         uses: yuezk/publish-ppa-package@develop
         with:
-          repository: 'ppa:ppa:tomasz-kontusz/test'
+          repository: 'ppa:tomasz-kontusz/test'
           gpg_private_key: ${{ secrets.PPA_GPG_PRIVATE_KEY }}
           gpg_passphrase: ${{ secrets.PPA_GPG_PASSPHRASE }}
           pkgdir: '${{ github.workspace }}/distribute/out/inkscape-silhouette-*/'
